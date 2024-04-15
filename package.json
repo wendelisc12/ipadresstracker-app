@@ -1,0 +1,26 @@
+{
+  "name": "ip-adress-tracker",
+  "version": "1.0.0",
+  "description": "rastreador de ip utilizando api ",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendelisc12/ipadresstracker-app.git"
+  },
+  "author": "wendel isaac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wendelisc12/ipadresstracker-app/issues"
+  },
+  "homepage": "https://github.com/wendelisc12/ipadresstracker-app#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-less": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "less": "^4.2.0"
+  }
+}
