@@ -4,7 +4,7 @@
   "description": "rastreador de ip utilizando api ",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp",
+    "grunt": "grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,9 +18,14 @@
   },
   "homepage": "https://github.com/wendelisc12/ipadresstracker-app#readme",
   "devDependencies": {
-    "gulp": "^5.0.0",
-    "gulp-less": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
+    "grunt": "^1.6.1",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-string-replace": "^1.3.3",
     "less": "^4.2.0"
   }
 }

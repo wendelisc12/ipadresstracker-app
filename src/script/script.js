@@ -6,7 +6,7 @@ $("document").ready(()=>{
     var map = L.map('map').setView(localization, 7);
 
     var pin = L.icon({
-        iconUrl: 'src/images/icon-location.svg',
+        iconUrl: 'images/icon-location.svg',
     
         iconSize:     [46, 56],
         iconAnchor:   [22, 94],
