@@ -8,7 +8,7 @@ module.exports = (grunt)=>{
             },
             prod:{
                 options:{compress: true},
-                files:{ 'dist/styles/style.min.css' : 'src/styles/style.less' }
+                files:{ 'prebuild/style.min.css' : 'src/styles/style.less' }
             }
         },
 
@@ -50,9 +50,13 @@ module.exports = (grunt)=>{
 
         'string-replace':{
             prod:{
-                files:{
+                files:[{
                     'prebuild/index.html' : 'src/index.html' 
                 },
+                {
+                    "dist/styles/style.min.css" : 'prebuild/style.min.css'
+                }
+                ],
                 options:{
                     replacements:[{
                         pattern: '"styles/style.css"',
@@ -61,6 +65,13 @@ module.exports = (grunt)=>{
                     {
                         pattern: '"script/script.js"',
                         replacement:'"script/script.min.js"'
+                    },
+                    {
+                        pattern: '"../../src/images/pattern-bg-desktop.png"',
+                        replacement: '"../images/pattern-bg-desktop.png"'
+                    },{
+                        pattern: '"../../src/images/pattern-bg-mobile.png"',
+                        replacement: '"../images/pattern-bg-mobile.png"'
                     }
                     ]
                 }
@@ -92,6 +103,6 @@ module.exports = (grunt)=>{
     grunt.loadNpmTasks("grunt-contrib-clean")
 
     grunt.registerTask("default", ["watch"])
-    grunt.registerTask("build", ["less:prod", "uglify", "imagemin" ,"string-replace:prod", "htmlmin","clean"])
+    grunt.registerTask("build", [ "uglify", "imagemin" ,"less:prod","string-replace:prod", "htmlmin", "clean"])
 
 }
