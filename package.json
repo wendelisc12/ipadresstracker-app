@@ -4,6 +4,7 @@
   "description": "rastreador de ip utilizando api ",
   "main": "index.js",
   "scripts": {
+    "build": "build",
     "grunt": "grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
